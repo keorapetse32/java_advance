@@ -1,0 +1,41 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package AbstractShape;
+
+/**
+ *
+ * @author keora
+ */
+public abstract class Shape {
+    double height;
+  double width;
+  Shape(double a, double b) {
+    height = a;
+    width = b;
+  }
+  abstract double calculateArea();
+  
+}
+class Rectangle extends Shape {
+  Rectangle(double a, double b) {
+    super(a, b);
+  }
+  // override calculateArea for rectangle
+  double calculateArea() {
+    System.out.println("Inside Area for Rectangle.");
+    return height * width;
+  }
+}
+class Triangle extends Shape {
+  Triangle(double a, double b) {
+    super(a, b);
+  }
+  // override calculateArea for right triangle
+  double calculateArea() {
+    System.out.println("Inside Area for Triangle.");
+    return height * width / 2;
+  }
+}
